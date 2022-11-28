@@ -13,5 +13,5 @@ if __name__ == '__main__':
     with open(file) as f:
         data = f.readlines()
 
-    print("Part 1 Solution: ")
-    print("Part 2 Solution: ")
+    print(f"Part 1 Solution: {part1(data)}")
+    print(f"Part 2 Solution: {part2(data)}")
