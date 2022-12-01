@@ -5,6 +5,8 @@ def solve(data):
     # Part 2
     ans2 = None
 
+    return ans1, ans2
+
 if __name__ == '__main__':
     testing = False
 
