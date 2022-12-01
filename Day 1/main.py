@@ -1,9 +1,21 @@
 def solve(data):
     # Part 1
-    ans1 = None
+    cal = []
+    n = 0
+    for i in data:
+        if i == '\n':
+            cal.append(n)
+            n = 0
+        else:
+            n += int(i)
+    ans1 = max(cal)
 
     # Part 2
-    ans2 = None
+    cal.sort()
+    ans2 = sum(cal[-3:])
+
+    return ans1, ans2
+
 
 if __name__ == '__main__':
     testing = False
