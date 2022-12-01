@@ -16,7 +16,6 @@ def solve(data):
 
     return ans1, ans2
 
-
 if __name__ == '__main__':
     testing = False
 
