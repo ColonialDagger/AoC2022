@@ -1,60 +1,23 @@
 def solve(data):
     # Part 1
-    score = 0
+    ans1 = 0
+    ruleset = {
+        'A': {'X': 4, 'Y': 8, 'Z': 3},
+        'B': {'X': 1, 'Y': 5, 'Z': 9},
+        'C': {'X': 7, 'Y': 2, 'Z': 6},
+    }
     for i in data:
-        opp = i[0]  # Opponent
-        pla = i[2]  # Player
-        if opp == 'A':
-            if pla == 'X':
-                score += 4
-            if pla == 'Y':
-                score += 8
-            if pla == 'Z':
-                score += 3
-        if opp == 'B':
-            if pla == 'X':
-                score += 1
-            if pla == 'Y':
-                score += 5
-            if pla == 'Z':
-                score += 9
-        if opp == 'C':
-            if pla == 'X':
-                score += 7
-            if pla == 'Y':
-                score += 2
-            if pla == 'Z':
-                score += 6
-
-    ans1 = score
+        ans1 += ruleset[i[0]][i[2]]
 
     # Part 2
-    score = 0
+    ans2 = 0
+    ruleset = {
+        'A': {'X': 3, 'Y': 4, 'Z': 8},
+        'B': {'X': 1, 'Y': 5, 'Z': 9},
+        'C': {'X': 2, 'Y': 6, 'Z': 7},
+    }
     for i in data:
-        opp = i[0]  # Opponent
-        pla = i[2]  # Player
-        if opp == 'A':
-            if pla == 'X':
-                score += 3
-            if pla == 'Y':
-                score += 4
-            if pla == 'Z':
-                score += 8
-        if opp == 'B':
-            if pla == 'X':
-                score += 1
-            if pla == 'Y':
-                score += 5
-            if pla == 'Z':
-                score += 9
-        if opp == 'C':
-            if pla == 'X':
-                score += 2
-            if pla == 'Y':
-                score += 6
-            if pla == 'Z':
-                score += 7
-    ans2 = score
+        ans2 += ruleset[i[0]][i[2]]
 
     return ans1, ans2
 
