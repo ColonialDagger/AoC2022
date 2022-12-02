@@ -2,22 +2,22 @@ def solve(data):
     # Part 1
     ans1 = 0
     ruleset = {
-        'A': {'X': 4, 'Y': 8, 'Z': 3},
-        'B': {'X': 1, 'Y': 5, 'Z': 9},
-        'C': {'X': 7, 'Y': 2, 'Z': 6},
+        ('A', 'X'): 4, ('A', 'Y'): 8, ('A', 'Z'): 3,
+        ('B', 'X'): 1, ('B', 'Y'): 5, ('B', 'Z'): 9,
+        ('C', 'X'): 7, ('C', 'Y'): 2, ('C', 'Z'): 6,
     }
     for i in data:
-        ans1 += ruleset[i[0]][i[2]]
+        ans1 += ruleset[i[0], i[2]]
 
     # Part 2
     ans2 = 0
     ruleset = {
-        'A': {'X': 3, 'Y': 4, 'Z': 8},
-        'B': {'X': 1, 'Y': 5, 'Z': 9},
-        'C': {'X': 2, 'Y': 6, 'Z': 7},
+        ('A', 'X'): 3, ('A', 'Y'): 4, ('A', 'Z'): 8,
+        ('B', 'X'): 1, ('B', 'Y'): 5, ('B', 'Z'): 9,
+        ('C', 'X'): 2, ('C', 'Y'): 6, ('C', 'Z'): 7,
     }
     for i in data:
-        ans2 += ruleset[i[0]][i[2]]
+        ans2 += ruleset[i[0], i[2]]
 
     return ans1, ans2
 
