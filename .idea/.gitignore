@@ -6,3 +6,4 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/fileTemplates/internal/Python Script.py
