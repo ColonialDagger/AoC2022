@@ -3,11 +3,12 @@ def solve(data):
     cal = []
     n = 0
     for i in data:
-        if i == '\n':
+        if i != '\n':
+            n += int(i)
+        else:
             cal.append(n)
             n = 0
-        else:
-            n += int(i)
+    cal.append(n)
     ans1 = max(cal)
 
     # Part 2
