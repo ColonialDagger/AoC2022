@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def solve(data):
     # Part 1
     cal = []
