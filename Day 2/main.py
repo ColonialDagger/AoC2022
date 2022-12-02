@@ -1,9 +1,60 @@
 def solve(data):
     # Part 1
-    ans1 = None
+    score = 0
+    for i in data:
+        opp = i[0]  # Opponent
+        pla = i[2]  # Player
+        if opp == 'A':
+            if pla == 'X':
+                score += 4
+            if pla == 'Y':
+                score += 8
+            if pla == 'Z':
+                score += 3
+        if opp == 'B':
+            if pla == 'X':
+                score += 1
+            if pla == 'Y':
+                score += 5
+            if pla == 'Z':
+                score += 9
+        if opp == 'C':
+            if pla == 'X':
+                score += 7
+            if pla == 'Y':
+                score += 2
+            if pla == 'Z':
+                score += 6
+
+    ans1 = score
 
     # Part 2
-    ans2 = None
+    score = 0
+    for i in data:
+        opp = i[0]  # Opponent
+        pla = i[2]  # Player
+        if opp == 'A':
+            if pla == 'X':
+                score += 3
+            if pla == 'Y':
+                score += 4
+            if pla == 'Z':
+                score += 8
+        if opp == 'B':
+            if pla == 'X':
+                score += 1
+            if pla == 'Y':
+                score += 5
+            if pla == 'Z':
+                score += 9
+        if opp == 'C':
+            if pla == 'X':
+                score += 2
+            if pla == 'Y':
+                score += 6
+            if pla == 'Z':
+                score += 7
+    ans2 = score
 
     return ans1, ans2
 
