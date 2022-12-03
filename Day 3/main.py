@@ -4,12 +4,8 @@ def solve(data):
     # Part 1
     ans1 = 0
     for i in data:
-        i = i.strip()
-        first = i[:int(i.__len__()/2)]
-        second = i[int(i.__len__()/2):]
-
-        for n in first:
-            if n in second:
+        for n in i[:int(i.__len__()/2)]:
+            if n in i[int(i.__len__()/2):]:
                 if n.isupper():
                     ans1 += ord(n)-38
                 else:
@@ -41,5 +37,6 @@ if __name__ == '__main__':
         data = f.read().splitlines()
 
     ans = solve(data)
+
     print(f"Part 1 Solution: {ans[0]}")
     print(f"Part 2 Solution: {ans[1]}")
