@@ -26,7 +26,7 @@ if __name__ == '__main__':
     print('Counting data...')
     file = 'testinput.txt' if testing else 'input.txt'
     with open(file) as f:
-        data = f.readlines()
+        data = f.read().splitlines()
 
     ans = solve(data)
     print(f"Part 1 Solution: {ans[0]}")
