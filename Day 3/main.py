@@ -2,10 +2,31 @@
 
 def solve(data):
     # Part 1
-    ans1 = None
+    ans1 = 0
+    for i in data:
+        i = i.strip()
+        first = i[:int(i.__len__()/2)]
+        second = i[int(i.__len__()/2):]
+
+        for n in first:
+            if n in second:
+                if n.isupper():
+                    ans1 += ord(n)-38
+                else:
+                    ans1 += ord(n)-96
+                break
 
     # Part 2
-    ans2 = None
+    ans2 = 0
+    for i in range(0, int(data.__len__()/3)):
+        group = data[i*3:i*3+3]
+        for n in group[0]:
+            if n in group[1] and n in group[2]:
+                if n.isupper():
+                    ans2 += ord(n)-38
+                else:
+                    ans2 += ord(n)-96
+                break
 
     return ans1, ans2
 
@@ -17,7 +38,7 @@ if __name__ == '__main__':
     print('Counting data...')
     file = 'testinput.txt' if testing else 'input.txt'
     with open(file) as f:
-        data = f.readlines()
+        data = f.read().splitlines()
 
     ans = solve(data)
     print(f"Part 1 Solution: {ans[0]}")
