@@ -6,7 +6,7 @@ def solve(data):
     cal = []
     n = 0
     for i in data:
-        if i != '\n':
+        if i != '':
             n += int(i)
         else:
             cal.append(n)
