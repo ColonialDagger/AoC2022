@@ -9,6 +9,7 @@ def solve(data):
         i[1] = list(map(int, i[1].split('-')))
 
         # Part 1
+        # Finds sets where all elements of one set are contained in the other set
         if (
             (i[0][0] <= i[1][0] and i[0][1] >= i[1][1]) or
             (i[1][0] <= i[0][0] and i[1][1] >= i[0][1])
@@ -16,6 +17,7 @@ def solve(data):
             ans1 += 1
 
         # Part 2
+        # Finds sets that have any elements overlapping each other
         if (
             i[0][0] <= i[1][0] <= i[0][1] or
             i[0][0] <= i[1][1] <= i[0][1] or

@@ -2,6 +2,7 @@
 
 def solve(data):
     # Part 1
+    # Finds the calorie count of the elf with the most calories
     cal = []
     n = 0
     for i in data:
@@ -14,6 +15,7 @@ def solve(data):
     ans1 = max(cal)
 
     # Part 2
+    # Finds the calorie counts of the three elves with the most calories
     cal.sort()
     ans2 = sum(cal[-3:])
 

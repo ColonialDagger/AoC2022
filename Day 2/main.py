@@ -2,6 +2,7 @@
 
 def solve(data):
     # Part 1
+    # Finds RPS score following the given strategy guide of what to play
     ans1 = 0
     ruleset = {
         ('A', 'X'): 4, ('A', 'Y'): 8, ('A', 'Z'): 3,
@@ -12,6 +13,7 @@ def solve(data):
         ans1 += ruleset[i[0], i[2]]
 
     # Part 2
+    # Finds RPS score following the given strategy guide of whether to win, lose, or draw
     ans2 = 0
     ruleset = {
         ('A', 'X'): 3, ('A', 'Y'): 4, ('A', 'Z'): 8,

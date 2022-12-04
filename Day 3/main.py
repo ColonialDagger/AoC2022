@@ -2,6 +2,7 @@
 
 def solve(data):
     # Part 1
+    # Finds sum of priorities of items in both halves of each rucksack
     ans1 = 0
     for i in data:
         for n in i[:int(i.__len__()/2)]:
@@ -13,6 +14,7 @@ def solve(data):
                 break
 
     # Part 2
+    # Finds common items between groups of 3 rucksacks each
     ans2 = 0
     for i in range(0, int(data.__len__()/3)):
         group = data[i*3:i*3+3]
