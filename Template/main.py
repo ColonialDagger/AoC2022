@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 def solve(data):
+    ans1 = 0
+    ans2 = 0
+
     # Part 1
-    ans1 = None
 
     # Part 2
-    ans2 = None
 
     return ans1, ans2
 
