@@ -5,8 +5,10 @@ def solve(data):
     ans2 = 0
 
     # Part 1
+    # Description
 
     # Part 2
+    # Description
 
     return ans1, ans2
 
