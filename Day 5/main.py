@@ -30,7 +30,6 @@ def solve(data):
     for stack in crates:  # Get top crate on each stack
         ans1 += stack[-1]
 
-
     # Part 2
     # Move crates in groups determined by instructions
 
