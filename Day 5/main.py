@@ -10,11 +10,9 @@ def solve(data):
     sep = data.index('')  # Line where data seperation occurs
     crates_init = ['']*int(data[sep-1][-1])  # Initial crates template
     instructions = data[sep+1:]
-
     for row in reversed(data[:sep-1]):  # Process crates input
         for n in range(len(row[1::4])):
             crates_init[n] = crates_init[n] + row[1::4][n] if row[1::4][n] != ' ' else crates_init[n]
-
     for (row, n) in zip(instructions, range(instructions.__len__())):  # Process instructions input
         row = row.split(' ')
         instructions[n] = [int(x) for x in row[1::2]]
@@ -25,7 +23,6 @@ def solve(data):
         n = row[0]  # Number of crates
         o = row[1]-1  # Origin
         d = row[2]-1  # Destination
-
         for i in range(n):
             crates[d] = crates[d] + crates[o][-1]
             crates[o] = crates[o][:-1]
@@ -38,12 +35,10 @@ def solve(data):
     # Move crates in groups determined by instructions
 
     crates = crates_init[:]  # Reset crates to original
-
     for row in instructions:  # Execute instructions
         n = row[0]  # Number of crates
         o = row[1]-1  # Origin
         d = row[2]-1  # Destination
-
         crates[d] = crates[d] + crates[o][-n:]
         crates[o] = crates[o][:-n]
 
