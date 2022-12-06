@@ -1,25 +1,14 @@
 #!/usr/bin/python3
 
 def solve(data):
-    ans1 = 0
-    ans2 = 0
+    # Part 1 and 2
+    # Search for first instance of non-matching n digit character markers
+    return search(data, 4), search(data, 14)
 
-    # Part 1
-    # Search for first instance of non-matching 4 digit character markers
-    for n in range(data[3:].__len__()):
-        if data[n:n+4].__len__() is set(data[n:n+4]).__len__():
-            ans1 = n+4
-            break
-
-    # Part 2
-    # Search for first instance of non-matching 14 digit character markers
-    for n in range(data[13:].__len__()):
-        if data[n:n+14].__len__() is set(data[n:n+14]).__len__():
-            ans2 = n+14
-            break
-
-    return ans1, ans2
-
+def search(data: str, n: int) -> int:
+    for i in range(data[n - 1:].__len__()):
+        if data[i:i + n].__len__() is set(data[i:i + n]).__len__():
+            return i + n
 
 if __name__ == '__main__':
     testing = False
@@ -27,7 +16,7 @@ if __name__ == '__main__':
     # Reads lines into a list input
     print('Counting data...')
     file = 'testinput.txt' if testing else 'input.txt'
-    with open(file) as f:
+    with open('testinput.txt' if testing else 'input.txt') as f:
         data = f.read().splitlines()[0]  # Data contains only one line in this specific problem
 
     ans = solve(data)
